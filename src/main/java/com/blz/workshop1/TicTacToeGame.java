@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class TicTacToeGame {
     static char[] board = new char[10];
     static int i;
-    public static char[] ticTac() {
+    public static char[] createBoard() {
         for (int i = 0; i < 9; i++) {
             board[i] = ' ';
         }
@@ -33,9 +33,16 @@ public class TicTacToeGame {
             System.out.println("Error.You have to choose X or O only");
         }
     }
+    public static void showBoard(){
+        System.out.println("Play Board Display\n");
+        System.out.println("|"+board[0]+"|"+board[1]+"|"+board[2]+"|\n");
+        System.out.println("|"+board[3]+"|"+board[4]+"|"+board[5]+"|\n");
+        System.out.println("|"+board[6]+"|"+board[7]+"|"+board[8]+"|\n");
+    }
     public static void main(String[] args) {
         System.out.println("Welcome to TicTacToe game");
-        System.out.println(ticTac());
+        createBoard();
         chooseLetter();
+        showBoard();
     }
 }
